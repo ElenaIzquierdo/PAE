@@ -1,0 +1,149 @@
+#:kivy 1.0.9
+
+<Relojes>:
+	
+
+<Zeus>:
+	reloj1: rellotge1
+	reloj2: rellotge2
+	reloj3: rellotge3
+	reloj4: rellotge4
+	
+	relojTema1: rellotgeTema1
+	relojTema2: rellotgeTema2
+	relojTema3: rellotgeTema3
+	
+	Relojes:
+		id: rellotge1
+	Relojes:
+		id: rellotge2
+	Relojes:
+		id: rellotge3
+	Relojes:
+		id: rellotge4
+		
+	Relojes:
+		id: rellotgeTema1
+	Relojes:
+		id: rellotgeTema2
+	Relojes:
+		id: rellotgeTema3
+
+	Label:
+		font_size: 48  
+		center_x: root.width / 4
+		top: root.top - 50 if not (root.lastIntTime > 8 and root.lastIntIndex == 0) else root.top + 300
+		text: "" if root.reloj1.cronometro is None else "Persona 1 (%s)"%(root.reloj1.cronometro)
+		color: 1,1,1,1
+		
+    Label:
+        font_size: 48  
+        center_x: root.width * 3 / 4
+        top: root.top - 50 if not (root.lastIntTime > 8 and root.lastIntIndex == 1) else root.top + 300
+        text: "" if root.reloj2.cronometro is None else "Persona 2 (%s)"%(root.reloj2.cronometro)
+		color: 1,1,1,1
+		
+	Label:
+		font_size: 48  
+		center_x: root.width / 4
+		top: root.top - 50 if (root.lastIntTime > 8 and root.lastIntIndex == 0) else root.top + 300
+		text: "" if root.reloj1.cronometro is None else "Persona 1 (%s)"%(root.reloj1.cronometro)
+		color: 1,0,0,1
+		
+    Label:
+        font_size: 48  
+        center_x: root.width * 3 / 4
+        top: root.top - 50 if (root.lastIntTime > 8 and root.lastIntIndex == 1) else root.top + 300
+        text: "" if root.reloj2.cronometro is None else "Persona 2 (%s)"%(root.reloj2.cronometro)
+		color: 1,0,0,1
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+        
+    Label:
+        font_size: 48  
+        center_x: root.width / 4
+        top: root.top - 150
+        text: "" if root.reloj3.cronometro is None else "Persona 3 (%s)"%(root.reloj3.cronometro)
+		color: 0,0,0,0
+		
+    Label:
+        font_size: 48  
+        center_x: root.width * 3 / 4
+        top: root.top - 150 
+        text: "" if root.reloj4.cronometro is None else "Persona 4 (%s)"%(root.reloj4.cronometro)
+		color: 0,0,0,0
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	Label:
+		font_size: 32  
+		center_x: root.width * 1 / 2
+		top: root.top - root.height + 100 if not (root.relojTema3.tiempo > 30*60 and root.temaParlat == 3) else root.top + 300
+		text: "" if root.relojTema3.cronometro is None else "[%s] Tema 3: Estimació dels pressupostos."%(root.relojTema3.cronometro)
+		color: 1,1,1,1
+		
+    Label:
+        font_size: 32  
+        center_x: root.width * 1 / 2
+        top: root.top - root.height + 150 if not (root.relojTema2.tiempo > 30*60 and root.temaParlat == 2) else root.top + 300
+		text: "" if root.relojTema2.cronometro is None else "[%s] Tema 2: Valoració dels evolutius proposats."%(root.relojTema2.cronometro)
+		color: 1,1,1,1
+		
+	Label:
+		font_size: 32  
+		center_x: root.width * 1 / 2
+		top: root.top - root.height + 200 if not (root.relojTema1.tiempo > 30*60 and root.temaParlat == 1) else root.top + 300
+		text: "" if root.relojTema1.cronometro is None else "[%s] Tema 1: Incidències del dispositiu de report."%(root.relojTema1.cronometro)
+		color: 1,1,1,1
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+	Label:
+		font_size: 32  
+		center_x: root.width * 1 / 2
+		top: root.top - root.height + 100 if (root.relojTema3.tiempo > 30*60 and root.temaParlat == 3) else root.top + 300
+		text: "" if root.relojTema3.cronometro is None else "[%s] Tema 3: Estimació dels pressupostos."%(root.relojTema3.cronometro)
+		color: 1,0,0,1
+		
+    Label:
+        font_size: 32  
+        center_x: root.width * 1 / 2
+        top: root.top - root.height + 150 if (root.relojTema2.tiempo > 30*60 and root.temaParlat == 2) else root.top + 300
+		text: "" if root.relojTema2.cronometro is None else "[%s] Tema 2: Valoració dels evolutius proposats."%(root.relojTema2.cronometro)
+		color: 1,0,0,1
+		
+	Label:
+		font_size: 32  
+		center_x: root.width * 1 / 2
+		top: root.top - root.height + 200 if (root.relojTema1.tiempo > 30*60 and root.temaParlat == 1) else root.top + 300
+		text: "" if root.relojTema1.cronometro is None else "[%s] Tema 1: Incidències del dispositiu de report."%(root.relojTema1.cronometro)
+		color: 1,0,0,1
